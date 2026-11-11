@@ -27,7 +27,7 @@ body{background:var(--plaster);color:var(--ink);font-family:var(--body);font-siz
 a.eyebrow:hover{text-decoration:underline}
 h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,7vw,64px);line-height:1.05;margin:10px 0 16px;text-wrap:balance}
 h2{font-family:var(--display);font-weight:400;font-size:30px;margin:0 0 16px;text-wrap:balance}
-p{margin:0 0 12px;max-width:66ch}
+p{margin:0 0 12px;max-width:66ch;text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto}
 section{padding-block:34px}
 .lede{font-size:19px;max-width:60ch}
 header{padding-block:60px 28px}
@@ -53,13 +53,14 @@ header{padding-block:60px 28px}
 .creds li{border-top:1px solid var(--line);padding-top:10px}
 .creds b{display:block;font-weight:600}
 .creds span{color:var(--muted);font-size:15px}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px 18px}
 .gallery figure{margin:0;min-width:0}
 .gallery img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:5px;display:block}
-.gallery figcaption{font-size:14px;color:var(--muted);margin-top:4px}
+.gallery figcaption{font-size:14px;line-height:1.45;color:var(--muted);margin-top:6px;text-align:left}
 footer{padding-block:32px 56px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
 footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:all}
 @media (prefers-reduced-motion: reduce){.card{transition:none}.card:hover{transform:none}}
+@media (max-width:560px){body{font-size:16px}.lede{font-size:17px}p{max-width:none}section{padding-block:26px}header{padding-block:40px 22px}}
 </style>
 </head>
 <body>
@@ -85,10 +86,10 @@ footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:a
 <div><h3>Ξετυλίγει την παράσταση</h3><p>Η διακόσμηση του αγγείου απλώνεται σε πανόραμα για να διαβαστεί ολόκληρη.</p></div>
 <div><h3>Λύνει δραστηριότητες</h3><p>Παζλ με όστρακα, ταξινόμηση μελανόμορφων και ερυθρόμορφων, ζωγραφική με το δάχτυλο και κουίζ.</p></div>
 <div><h3>Χωράει σε κάθε αίθουσα</h3><p>Η διάταξη προσαρμόζεται αυτόματα στο σχήμα και το μέγεθος του δωματίου.</p></div></div></section>
-  <section><h2>Μέσα στην εφαρμογή</h2><div class="gallery"><figure><img src="../media/vases-hall.jpg" alt="Τα αγγεία στήνονται αυτόματα στο σκαναρισμένο δωμάτιο"><figcaption>Τα αγγεία στήνονται αυτόματα στο σκαναρισμένο δωμάτιο</figcaption></figure>
-<figure><img src="../media/vases-exekias.jpg" alt="Ο αμφορέας του Εξηκία"><figcaption>Ο αμφορέας του Εξηκία</figcaption></figure>
+  <section><h2>Μέσα στην εφαρμογή</h2><div class="gallery"><figure><img src="../media/vases-hall.jpg" alt="Η αίθουσα με τα έξι αυθεντικά αγγεία σε βάθρα"><figcaption>Η αίθουσα με τα έξι αυθεντικά αγγεία</figcaption></figure>
+<figure><img src="../media/vases-exekias.jpg" alt="Ο αμφορέας του Εξηκία με τα κουμπιά «Άκουσε» και «Ξετύλιξε»"><figcaption>Ο αμφορέας του Εξηκία, με τα κουμπιά «Άκουσε» και «Ξετύλιξε»</figcaption></figure>
 <figure><img src="../media/vases-panorama.jpg" alt="Η παράσταση του αγγείου ξετυλίγεται σε πανόραμα"><figcaption>Η παράσταση του αγγείου ξετυλίγεται σε πανόραμα</figcaption></figure>
-<figure><img src="../media/vases-alive.jpg" alt="Οι μορφές «βγαίνουν» από τον κρατήρα"><figcaption>Οι μορφές «βγαίνουν» από τον κρατήρα</figcaption></figure></div></section>
+<figure><img src="../media/vases-visit.jpg" alt="Ο επισκέπτης πλησιάζει την υδρία ανάμεσα στα βάθρα"><figcaption>Ο επισκέπτης πλησιάζει κάθε αγγείο για να ακούσει την ιστορία του</figcaption></figure></div></section>
   <section><h2>Τεχνολογίες</h2><ul class="chips"><li>Unity 6</li><li>C#</li><li>URP</li><li>Meta XR SDK</li><li>Interaction SDK</li><li>MR Utility Kit</li><li>Hand tracking</li><li>Passthrough</li><li>glTF, LOD</li><li>Εκπαιδευτικό σενάριο</li></ul></section>
 </main>
 <footer class="wrap"><p>Χριστίνα Κλημεντιώτη · Επικοινωνία: <a class="mail" href="mailto:cklimedioti@gmail.com">cklimedioti@gmail.com</a> · <a class="mail" href="mailto:xristinaklime@sch.gr">xristinaklime@sch.gr</a></p></footer>

@@ -27,7 +27,7 @@ body{background:var(--plaster);color:var(--ink);font-family:var(--body);font-siz
 a.eyebrow:hover{text-decoration:underline}
 h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,7vw,64px);line-height:1.05;margin:10px 0 16px;text-wrap:balance}
 h2{font-family:var(--display);font-weight:400;font-size:30px;margin:0 0 16px;text-wrap:balance}
-p{margin:0 0 12px;max-width:66ch}
+p{margin:0 0 12px;max-width:66ch;text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto}
 section{padding-block:34px}
 .lede{font-size:19px;max-width:60ch}
 header{padding-block:60px 28px}
@@ -53,14 +53,15 @@ header{padding-block:60px 28px}
 .creds li{border-top:1px solid var(--line);padding-top:10px}
 .creds b{display:block;font-weight:600}
 .creds span{color:var(--muted);font-size:15px}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px 18px}
 .gallery figure{margin:0;min-width:0}
 .gallery img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:5px;display:block}
-.gallery figcaption{font-size:14px;color:var(--muted);margin-top:4px}
+.gallery figcaption{font-size:14px;line-height:1.45;color:var(--muted);margin-top:6px;text-align:left}
 .cta{display:inline-block;margin-top:14px;padding:11px 20px;border-radius:8px;background:var(--blue);color:var(--panel);font-weight:600;text-decoration:none}.cta:hover{filter:brightness(1.1)}.cta:focus-visible{outline:2px solid var(--ochre);outline-offset:2px}
 footer{padding-block:32px 56px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
 footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:all}
 @media (prefers-reduced-motion: reduce){.card{transition:none}.card:hover{transform:none}}
+@media (max-width:560px){body{font-size:16px}.lede{font-size:17px}p{max-width:none}section{padding-block:26px}header{padding-block:40px 22px}}
 </style>
 </head>
 <body>
@@ -90,7 +91,7 @@ footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:a
   <section><h2>Μέσα στην εφαρμογή</h2><div class="gallery"><figure><img src="../media/cell-desk.jpg" alt="Ζωικό και φυτικό κύτταρο πάνω στο θρανίο"><figcaption>Ζωικό και φυτικό κύτταρο πάνω στο θρανίο</figcaption></figure>
 <figure><img src="../media/cell-labels.jpg" alt="Ετικέτες, όπως στο σχολικό βιβλίο"><figcaption>Ετικέτες, όπως στο σχολικό βιβλίο</figcaption></figure>
 <figure><img src="../media/cell-section.jpg" alt="Τομή: το εσωτερικό του κυττάρου"><figcaption>Τομή: το εσωτερικό του κυττάρου</figcaption></figure>
-<figure><img src="../media/cell-sort.jpg" alt="Ταξινόμηση οργανιδίων"><figcaption>Ταξινόμηση οργανιδίων</figcaption></figure></div></section>
+<figure><img src="../media/cell-sort.jpg" alt="Ταξινόμηση: ο μαθητής σέρνει κάθε οργανίδιο στο σωστό κύτταρο"><figcaption>Ταξινόμηση: κάθε οργανίδιο στο σωστό κύτταρο</figcaption></figure></div></section>
   <section><h2>Τεχνολογίες</h2><ul class="chips"><li>Unity 6</li><li>C#</li><li>OpenXR</li><li>AR Foundation</li><li>WebXR</li><li>Hand tracking</li><li>Procedural meshes</li><li>Λειτουργία χωρίς διαδίκτυο</li><li>Οδηγός εκπαιδευτικού</li></ul></section>
 </main>
 <footer class="wrap"><p>Χριστίνα Κλημεντιώτη · Επικοινωνία: <a class="mail" href="mailto:cklimedioti@gmail.com">cklimedioti@gmail.com</a> · <a class="mail" href="mailto:xristinaklime@sch.gr">xristinaklime@sch.gr</a></p></footer>

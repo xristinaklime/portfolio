@@ -26,9 +26,9 @@ body{background:var(--plaster);color:var(--ink);font-family:var(--body);font-siz
 a.eyebrow:hover{text-decoration:underline}
 h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,7vw,64px);line-height:1.05;margin:10px 0 16px;text-wrap:balance}
 h2{font-family:var(--display);font-weight:400;font-size:30px;margin:0 0 16px;text-wrap:balance}
-p{margin:0 0 12px;max-width:66ch;text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto}
+p{margin:0 0 12px;max-width:none;text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto}
 section{padding-block:34px}
-.lede{font-size:19px;max-width:60ch}
+.lede{font-size:19px;max-width:none}
 header{padding-block:60px 28px}
 .frieze{height:72px;background:url("minoan/marine.jpg") repeat-x center/auto 100%;border-block:5px solid var(--blue)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding:0;list-style:none}
@@ -58,7 +58,7 @@ header{padding-block:60px 28px}
 .gallery img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:5px;display:block}
 .gallery figcaption{font-size:14px;line-height:1.45;color:var(--muted);margin-top:6px;text-align:left}
 footer{padding-block:32px 56px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
-footer p{text-align:left}
+footer p{text-align:left;max-width:none}
 footer .mails{white-space:nowrap}
 footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:all}
 @media (prefers-reduced-motion: reduce){.card{transition:none}.card:hover{transform:none}}
@@ -72,15 +72,15 @@ footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:a
   <h1>The Hall of Vases</h1>
   <p class="lede">Ένα μουσείο αρχαίας ελληνικής κεραμικής που στήνεται μέσα στο δικό σου δωμάτιο. Ο επισκέπτης περπατά ανάμεσα σε έξι αυθεντικά αγγεία, ανάμεσά τους ο αμφορέας του Εξηκία.</p>
   <a class="cta" href="app/">Δοκίμασε την εφαρμογή στον browser</a>
-  <p class="note">Εκδοχή για υπολογιστή: περπατάς με το πληκτρολόγιο και κοιτάς γύρω με το ποντίκι. Η πλήρης εμπειρία, μέσα στο δικό σου δωμάτιο, είναι στα γυαλιά Meta Quest 3.</p>
-  <div class="eyebrow" style="margin-top:8px">Mixed Reality · Meta Quest 3</div>
+  <p class="note">Εκδοχή για υπολογιστή: περπατάς με το πληκτρολόγιο και κοιτάς γύρω με το ποντίκι. Η πλήρης εμπειρία, μέσα στο δικό σου δωμάτιο, είναι στα γυαλιά Meta&nbsp;Quest&nbsp;3.</p>
+  <div class="eyebrow" style="margin-top:8px">Mixed Reality · Meta&nbsp;Quest&nbsp;3</div>
 </header>
 <main class="wrap">
   <section>
     <video class="film" controls playsinline preload="metadata" poster="../media/poster-vases.jpg" src="../media/vases.mp4" aria-label="Βίντεο: The Hall of Vases"></video>
-    <p class="note">Το βίντεο γυρίστηκε τρέχοντας την εφαρμογή στο Unity. Στα γυαλιά Meta Quest 3 εμφανίζεται μέσα στον πραγματικό χώρο.</p>
+    <p class="note">Το βίντεο γυρίστηκε τρέχοντας την εφαρμογή στο Unity. Στα γυαλιά Meta&nbsp;Quest&nbsp;3 εμφανίζεται μέσα στον πραγματικό χώρο.</p>
   </section>
-  <section><h2>Το έργο</h2><p>Σχεδίασα και ανέπτυξα ένα εικονικό μουσείο αρχαίας ελληνικής κεραμικής σε μεικτή πραγματικότητα για το Meta Quest 3. Ο επισκέπτης βλέπει τον πραγματικό του χώρο μέσα από το passthrough, και γύρω του εμφανίζονται τα αγγεία.</p>
+  <section><h2>Το έργο</h2><p>Σχεδίασα και ανέπτυξα ένα εικονικό μουσείο αρχαίας ελληνικής κεραμικής σε μεικτή πραγματικότητα για το Meta&nbsp;Quest&nbsp;3. Ο επισκέπτης βλέπει τον πραγματικό του χώρο μέσα από το passthrough, και γύρω του εμφανίζονται τα αγγεία.</p>
 <p>Η εφαρμογή διαβάζει το σκαναρισμένο δωμάτιο και στήνει μόνη της τα βάθρα και τους σταθμούς δραστηριοτήτων, ώστε να χωρούν σε χώρους κάθε μεγέθους και να μένουν μακριά από τοίχους και έπιπλα.</p>
 <p>Συνέταξα επίσης το εκπαιδευτικό σενάριο, με σχέδιο μαθήματος, φύλλο εργασίας και οδηγό, για χρήση στην τάξη.</p></section>
   <section><h2>Τα έξι αγγεία</h2><ul class="creds"><li><b>Αμφορέας του Εξηκία</b><span>περ. 540–530 π.Χ.</span></li><li><b>Υδρία</b><span>περ. 520 π.Χ.</span></li><li><b>Λήκυθος</b><span>περ. 500 π.Χ.</span></li><li><b>Κύλικα</b><span>περ. 490 π.Χ.</span></li><li><b>Κρατήρας</b><span>περ. 450 π.Χ.</span></li><li><b>Οινοχόη</b><span>περ. 440–430 π.Χ.</span></li></ul></section>

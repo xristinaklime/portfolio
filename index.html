@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>Χριστίνα Κλημεντιώτη</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: reading column; hero with name and a fresco-pattern band; project cards in a grid that grows with each new work */
+:root{
+  --plaster:#f2f1ec; --panel:#ffffff; --ink:#1c2430; --muted:#5a6573;
+  --blue:#1f5a86; --ochre:#b4472a; --line:#d9dbd4; --night:#14223a;
+  --display:"GFS Didot","Didot","Times New Roman",serif;
+  --body:"Noto Sans","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --plaster:#141922; --panel:#1c232e; --ink:#e9e7e1; --muted:#a3acb8;
+  --blue:#7fb3db; --ochre:#e08a6c; --line:#2c3542; --night:#0d1522; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --plaster:#141922; --panel:#1c232e; --ink:#e9e7e1; --muted:#a3acb8;
+  --blue:#7fb3db; --ochre:#e08a6c; --line:#2c3542; --night:#0d1522; color-scheme:dark}
+body{background:var(--plaster);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ochre);font-weight:600;text-decoration:none}
+a.eyebrow:hover{text-decoration:underline}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,7vw,64px);line-height:1.05;margin:10px 0 16px;text-wrap:balance}
+h2{font-family:var(--display);font-weight:400;font-size:30px;margin:0 0 16px;text-wrap:balance}
+p{margin:0 0 12px;max-width:66ch}
+section{padding-block:34px}
+.lede{font-size:19px;max-width:60ch}
+header{padding-block:60px 28px}
+.frieze{height:72px;background:url("minoan/marine.jpg") repeat-x center/auto 100%;border-block:5px solid var(--blue)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding:0;list-style:none}
+.chips li{border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:14px;background:var(--panel)}
+.projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.card{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;color:inherit;text-decoration:none;transition:transform .15s ease,border-color .15s ease}
+.card:hover,.card:focus-visible{transform:translateY(-2px);border-color:var(--blue)}
+.card:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top;display:block}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .kind{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ochre);font-weight:600}
+.card h3{font-family:var(--display);font-weight:400;font-size:23px;margin:0;line-height:1.15}
+.card p{margin:0;font-size:15px;color:var(--muted)}
+.film{width:100%;max-width:100%;aspect-ratio:16/9;display:block;background:var(--night);border-radius:8px}
+.note{font-size:14px;color:var(--muted);margin-top:6px}
+.offer{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px 28px}
+.offer h3,.features h3{font-size:16px;margin:0 0 4px;color:var(--blue)}
+.offer p,.features p{font-size:15px;color:var(--muted);margin:0}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px 28px}
+.creds{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px 28px;padding:0;margin:0;list-style:none}
+.creds li{border-top:1px solid var(--line);padding-top:10px}
+.creds b{display:block;font-weight:600}
+.creds span{color:var(--muted);font-size:15px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.gallery figure{margin:0;min-width:0}
+.gallery img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:5px;display:block}
+.gallery figcaption{font-size:14px;color:var(--muted);margin-top:4px}
+footer{padding-block:32px 56px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:all}
+@media (prefers-reduced-motion: reduce){.card{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="eyebrow">Portfolio</div>
+  <h1>Χριστίνα Κλημεντιώτη</h1>
+  <p class="lede">Σχεδιάζω και αναπτύσσω ψηφιακές εμπειρίες πολιτισμού και εκπαίδευσης: εικονικά μουσεία, εφαρμογές μεικτής πραγματικότητας για Meta Quest 3 και εκπαιδευτικά παιχνίδια, έτοιμα για χρήση από το κοινό και στην τάξη.</p>
+  <ul class="chips" aria-label="Τεχνολογίες">
+    <li>Unity 6</li><li>C#</li><li>Mixed Reality</li><li>Meta Quest 3</li><li>Hand tracking</li><li>OpenXR</li><li>WebXR</li><li>Εκπαιδευτικός σχεδιασμός</li>
+  </ul>
+</header>
+
+<div class="frieze" role="img" aria-label="Μοτίβο θαλάσσιου ρυθμού με χταπόδια"></div>
+
+<main class="wrap">
+  <section aria-labelledby="works">
+    <h2 id="works">Έργα</h2>
+    <div class="projects">
+      <a class="card" href="vases/">
+        <img src="media/card-vases.jpg" alt="Αρχαία αγγεία σε βάθρα μέσα σε δωμάτιο, μέσα από τα γυαλιά Meta Quest 3">
+        <div class="body">
+          <div class="kind">Mixed Reality · Meta Quest 3</div>
+          <h3>The Hall of Vases</h3>
+          <p>Μουσείο αρχαίας ελληνικής κεραμικής που στήνεται μέσα στο δικό σου δωμάτιο, με αφήγηση και έξι δραστηριότητες.</p>
+        </div>
+      </a>
+      <a class="card" href="cell/">
+        <img src="media/card-cell.jpg" alt="Τρισδιάστατο ζωικό και φυτικό κύτταρο πάνω σε θρανίο, με ετικέτα «Πυρήνας»">
+        <div class="body">
+          <div class="kind">Mixed Reality · Meta Quest 3</div>
+          <h3>Εργαστήριο Κυττάρου</h3>
+          <p>Ζωικό και φυτικό κύτταρο πάνω στο θρανίο, για τη Βιολογία της ΣΤ΄ Δημοτικού και της Α΄ Γυμνασίου. Δοκιμάζεται και στον browser.</p>
+        </div>
+      </a>
+      <a class="card" href="minoan/">
+        <img src="minoan/shot_wide2010270.jpg" alt="Η τοιχογραφία με τους γρύπες μέσα στο εικονικό μουσείο">
+        <div class="body">
+          <div class="kind">Εικονικό μουσείο · PC</div>
+          <h3>Μινωικό Μουσείο Τοιχογραφιών</h3>
+          <p>Δίγλωσσο εικονικό μουσείο με 7 τοιχογραφίες, 7 αγγεία, ξενάγηση, κυνήγι συμβόλων και κουίζ.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section aria-labelledby="offer">
+    <h2 id="offer">Τι μπορώ να κάνω</h2>
+    <div class="offer">
+      <div><h3>Ψηφιακές εμπειρίες πολιτισμού</h3><p>Για μουσεία και αρχαιολογικούς χώρους, από την τεκμηρίωση και το σενάριο έως την υλοποίηση σε Unity.</p></div>
+      <div><h3>Εφαρμογές XR για την τάξη</h3><p>Εφαρμογές μεικτής πραγματικότητας με σχέδια μαθήματος, φύλλα εργασίας και οδηγό για τον εκπαιδευτικό.</p></div>
+      <div><h3>Επιμόρφωση εκπαιδευτικών</h3><p>Ώστε τα ψηφιακά εργαλεία να φτάνουν στους εκπαιδευτικούς και να εφαρμόζονται στην πράξη.</p></div>
+      <div><h3>Αξιολόγηση με χρήστες</h3><p>Σχεδιασμός μελετών και μέτρηση της εμπειρίας μαθητών και επισκεπτών.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="about">
+    <h2 id="about">Σπουδές και εμπειρία</h2>
+    <ul class="creds">
+      <li><b>Διδάκτωρ Επιστημών της Αγωγής</b><span>ΕΚΠΑ, 2019</span></li>
+      <li><b>Πτυχίο Ιστορίας–Αρχαιολογίας</b><span>Πανεπιστήμιο Πατρών, 2024</span></li>
+      <li><b>ΜΔΕ Ψηφιακές και Ήπιες Δεξιότητες</b><span>Διεθνές Πανεπιστήμιο της Ελλάδος, 2025</span></li>
+      <li><b>Μέλος Παιδαγωγικής Ομάδας</b><span>Κέντρο Καινοτομίας Αττικής, ΙΤΥΕ «Διόφαντος»</span></li>
+      <li><b>Σύμβουλος Β΄</b><span>Ινστιτούτο Εκπαιδευτικής Πολιτικής, 2022–2024</span></li>
+      <li><b>Εθνική Βιβλιοθήκη της Ελλάδος</b><span>Απόσπαση, 2021–2022</span></li>
+    </ul>
+  </section>
+</main>
+<footer class="wrap"><p>Χριστίνα Κλημεντιώτη · Επικοινωνία: <a class="mail" href="mailto:cklimedioti@gmail.com">cklimedioti@gmail.com</a> · <a class="mail" href="mailto:xristinaklime@sch.gr">xristinaklime@sch.gr</a></p></footer>
+</body>
+</html>

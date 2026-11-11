@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>The Hall of Vases</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: reading column; hero with name and a fresco-pattern band; project cards in a grid that grows with each new work */
+:root{
+  --plaster:#f2f1ec; --panel:#ffffff; --ink:#1c2430; --muted:#5a6573;
+  --blue:#1f5a86; --ochre:#b4472a; --line:#d9dbd4; --night:#14223a;
+  --display:"GFS Didot","Didot","Times New Roman",serif;
+  --body:"Noto Sans","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --plaster:#141922; --panel:#1c232e; --ink:#e9e7e1; --muted:#a3acb8;
+  --blue:#7fb3db; --ochre:#e08a6c; --line:#2c3542; --night:#0d1522; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --plaster:#141922; --panel:#1c232e; --ink:#e9e7e1; --muted:#a3acb8;
+  --blue:#7fb3db; --ochre:#e08a6c; --line:#2c3542; --night:#0d1522; color-scheme:dark}
+body{background:var(--plaster);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ochre);font-weight:600;text-decoration:none}
+a.eyebrow:hover{text-decoration:underline}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,7vw,64px);line-height:1.05;margin:10px 0 16px;text-wrap:balance}
+h2{font-family:var(--display);font-weight:400;font-size:30px;margin:0 0 16px;text-wrap:balance}
+p{margin:0 0 12px;max-width:66ch}
+section{padding-block:34px}
+.lede{font-size:19px;max-width:60ch}
+header{padding-block:60px 28px}
+.frieze{height:72px;background:url("minoan/marine.jpg") repeat-x center/auto 100%;border-block:5px solid var(--blue)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding:0;list-style:none}
+.chips li{border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:14px;background:var(--panel)}
+.projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.card{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;color:inherit;text-decoration:none;transition:transform .15s ease,border-color .15s ease}
+.card:hover,.card:focus-visible{transform:translateY(-2px);border-color:var(--blue)}
+.card:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top;display:block}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .kind{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ochre);font-weight:600}
+.card h3{font-family:var(--display);font-weight:400;font-size:23px;margin:0;line-height:1.15}
+.card p{margin:0;font-size:15px;color:var(--muted)}
+.film{width:100%;max-width:100%;aspect-ratio:16/9;display:block;background:var(--night);border-radius:8px}
+.note{font-size:14px;color:var(--muted);margin-top:6px}
+.offer{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px 28px}
+.offer h3,.features h3{font-size:16px;margin:0 0 4px;color:var(--blue)}
+.offer p,.features p{font-size:15px;color:var(--muted);margin:0}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px 28px}
+.creds{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px 28px;padding:0;margin:0;list-style:none}
+.creds li{border-top:1px solid var(--line);padding-top:10px}
+.creds b{display:block;font-weight:600}
+.creds span{color:var(--muted);font-size:15px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.gallery figure{margin:0;min-width:0}
+.gallery img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:5px;display:block}
+.gallery figcaption{font-size:14px;color:var(--muted);margin-top:4px}
+footer{padding-block:32px 56px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:all}
+@media (prefers-reduced-motion: reduce){.card{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <a class="eyebrow" href="../">← Όλα τα έργα · Χριστίνα Κλημεντιώτη</a>
+  <h1>The Hall of Vases</h1>
+  <p class="lede">Ένα μουσείο αρχαίας ελληνικής κεραμικής που στήνεται μέσα στο δικό σου δωμάτιο. Ο επισκέπτης περπατά ανάμεσα σε έξι αυθεντικά αγγεία, ανάμεσά τους ο αμφορέας του Εξηκία.</p>
+  <div class="eyebrow" style="margin-top:8px">Mixed Reality · Meta Quest 3</div>
+</header>
+<main class="wrap">
+  <section>
+    <video class="film" controls playsinline preload="metadata" poster="../media/poster-vases.jpg" src="../media/vases.mp4" aria-label="Βίντεο: The Hall of Vases"></video>
+    <p class="note">Το βίντεο γυρίστηκε τρέχοντας την εφαρμογή στο Unity. Στα γυαλιά Meta Quest 3 εμφανίζεται μέσα στον πραγματικό χώρο.</p>
+  </section>
+  <section><h2>Το έργο</h2><p>Σχεδίασα και ανέπτυξα ένα εικονικό μουσείο αρχαίας ελληνικής κεραμικής σε μεικτή πραγματικότητα για το Meta Quest 3. Ο επισκέπτης βλέπει τον πραγματικό του χώρο μέσα από το passthrough, και γύρω του εμφανίζονται τα αγγεία.</p>
+<p>Η εφαρμογή διαβάζει το σκαναρισμένο δωμάτιο και στήνει μόνη της τα βάθρα και τους σταθμούς δραστηριοτήτων, ώστε να χωρούν σε χώρους κάθε μεγέθους και να μένουν μακριά από τοίχους και έπιπλα.</p>
+<p>Συνέταξα επίσης το εκπαιδευτικό σενάριο, με σχέδιο μαθήματος, φύλλο εργασίας και οδηγό, για χρήση στην τάξη.</p></section>
+  <section><h2>Τα έξι αγγεία</h2><ul class="creds"><li><b>Αμφορέας του Εξηκία</b><span>περ. 540–530 π.Χ.</span></li><li><b>Υδρία</b><span>περ. 520 π.Χ.</span></li><li><b>Λήκυθος</b><span>περ. 500 π.Χ.</span></li><li><b>Κύλικα</b><span>περ. 490 π.Χ.</span></li><li><b>Κρατήρας</b><span>περ. 450 π.Χ.</span></li><li><b>Οινοχόη</b><span>περ. 440–430 π.Χ.</span></li></ul></section>
+  <section><h2>Τι κάνει ο χρήστης</h2><div class="features"><div><h3>Περπατά ανάμεσα στα αγγεία</h3><p>Καθώς πλησιάζει, κάθε αγγείο φωτίζεται, εμφανίζεται η ετικέτα του και η παράστασή του «ζωντανεύει».</p></div>
+<div><h3>Τα πιάνει με τα χέρια</h3><p>Με hand tracking σηκώνει και γυρίζει τα αγγεία, χωρίς χειριστήρια.</p></div>
+<div><h3>Ακούει την ιστορία τους</h3><p>Πατά «Άκουσε» στο βάθρο και ακούει ελληνική αφήγηση για κάθε έκθεμα.</p></div>
+<div><h3>Ξετυλίγει την παράσταση</h3><p>Η διακόσμηση του αγγείου απλώνεται σε πανόραμα για να διαβαστεί ολόκληρη.</p></div>
+<div><h3>Λύνει δραστηριότητες</h3><p>Παζλ με όστρακα, ταξινόμηση μελανόμορφων και ερυθρόμορφων, ζωγραφική με το δάχτυλο και κουίζ.</p></div>
+<div><h3>Χωράει σε κάθε αίθουσα</h3><p>Η διάταξη προσαρμόζεται αυτόματα στο σχήμα και το μέγεθος του δωματίου.</p></div></div></section>
+  <section><h2>Μέσα στην εφαρμογή</h2><div class="gallery"><figure><img src="../media/vases-hall.jpg" alt="Τα αγγεία στήνονται αυτόματα στο σκαναρισμένο δωμάτιο"><figcaption>Τα αγγεία στήνονται αυτόματα στο σκαναρισμένο δωμάτιο</figcaption></figure>
+<figure><img src="../media/vases-exekias.jpg" alt="Ο αμφορέας του Εξηκία"><figcaption>Ο αμφορέας του Εξηκία</figcaption></figure>
+<figure><img src="../media/vases-panorama.jpg" alt="Η παράσταση του αγγείου ξετυλίγεται σε πανόραμα"><figcaption>Η παράσταση του αγγείου ξετυλίγεται σε πανόραμα</figcaption></figure>
+<figure><img src="../media/vases-alive.jpg" alt="Οι μορφές «βγαίνουν» από τον κρατήρα"><figcaption>Οι μορφές «βγαίνουν» από τον κρατήρα</figcaption></figure></div></section>
+  <section><h2>Τεχνολογίες</h2><ul class="chips"><li>Unity 6</li><li>C#</li><li>URP</li><li>Meta XR SDK</li><li>Interaction SDK</li><li>MR Utility Kit</li><li>Hand tracking</li><li>Passthrough</li><li>glTF, LOD</li><li>Εκπαιδευτικό σενάριο</li></ul></section>
+</main>
+<footer class="wrap"><p>Χριστίνα Κλημεντιώτη · Επικοινωνία: <a class="mail" href="mailto:cklimedioti@gmail.com">cklimedioti@gmail.com</a> · <a class="mail" href="mailto:xristinaklime@sch.gr">xristinaklime@sch.gr</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>Εργαστήριο Κυττάρου</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: reading column; hero with name and a fresco-pattern band; project cards in a grid that grows with each new work */
+:root{
+  --plaster:#f2f1ec; --panel:#ffffff; --ink:#1c2430; --muted:#5a6573;
+  --blue:#1f5a86; --ochre:#b4472a; --line:#d9dbd4; --night:#14223a;
+  --display:"GFS Didot","Didot","Times New Roman",serif;
+  --body:"Noto Sans","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --plaster:#141922; --panel:#1c232e; --ink:#e9e7e1; --muted:#a3acb8;
+  --blue:#7fb3db; --ochre:#e08a6c; --line:#2c3542; --night:#0d1522; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --plaster:#141922; --panel:#1c232e; --ink:#e9e7e1; --muted:#a3acb8;
+  --blue:#7fb3db; --ochre:#e08a6c; --line:#2c3542; --night:#0d1522; color-scheme:dark}
+body{background:var(--plaster);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ochre);font-weight:600;text-decoration:none}
+a.eyebrow:hover{text-decoration:underline}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,7vw,64px);line-height:1.05;margin:10px 0 16px;text-wrap:balance}
+h2{font-family:var(--display);font-weight:400;font-size:30px;margin:0 0 16px;text-wrap:balance}
+p{margin:0 0 12px;max-width:66ch}
+section{padding-block:34px}
+.lede{font-size:19px;max-width:60ch}
+header{padding-block:60px 28px}
+.frieze{height:72px;background:url("minoan/marine.jpg") repeat-x center/auto 100%;border-block:5px solid var(--blue)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding:0;list-style:none}
+.chips li{border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:14px;background:var(--panel)}
+.projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.card{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;color:inherit;text-decoration:none;transition:transform .15s ease,border-color .15s ease}
+.card:hover,.card:focus-visible{transform:translateY(-2px);border-color:var(--blue)}
+.card:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.card img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top;display:block}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .kind{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ochre);font-weight:600}
+.card h3{font-family:var(--display);font-weight:400;font-size:23px;margin:0;line-height:1.15}
+.card p{margin:0;font-size:15px;color:var(--muted)}
+.film{width:100%;max-width:100%;aspect-ratio:16/9;display:block;background:var(--night);border-radius:8px}
+.note{font-size:14px;color:var(--muted);margin-top:6px}
+.offer{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px 28px}
+.offer h3,.features h3{font-size:16px;margin:0 0 4px;color:var(--blue)}
+.offer p,.features p{font-size:15px;color:var(--muted);margin:0}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px 28px}
+.creds{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px 28px;padding:0;margin:0;list-style:none}
+.creds li{border-top:1px solid var(--line);padding-top:10px}
+.creds b{display:block;font-weight:600}
+.creds span{color:var(--muted);font-size:15px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.gallery figure{margin:0;min-width:0}
+.gallery img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:5px;display:block}
+.gallery figcaption{font-size:14px;color:var(--muted);margin-top:4px}
+.cta{display:inline-block;margin-top:14px;padding:11px 20px;border-radius:8px;background:var(--blue);color:var(--panel);font-weight:600;text-decoration:none}.cta:hover{filter:brightness(1.1)}.cta:focus-visible{outline:2px solid var(--ochre);outline-offset:2px}
+footer{padding-block:32px 56px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:all}
+@media (prefers-reduced-motion: reduce){.card{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <a class="eyebrow" href="../">← Όλα τα έργα · Χριστίνα Κλημεντιώτη</a>
+  <h1>Εργαστήριο Κυττάρου</h1>
+  <p class="lede">Εκπαιδευτική εφαρμογή μεικτής πραγματικότητας για τη Βιολογία της ΣΤ΄ Δημοτικού και της Α΄ Γυμνασίου. Ένα ζωικό και ένα φυτικό κύτταρο «κάθονται» πάνω στο θρανίο του μαθητή.</p>
+  <div class="eyebrow" style="margin-top:8px">Mixed Reality · Meta Quest 3 · WebXR</div>
+  <a class="cta" href="app/">Δοκίμασε την εφαρμογή στον browser</a>
+  <p class="note">Ανοίγει σε υπολογιστή και, για μεικτή πραγματικότητα, από τον browser του Meta Quest 3.</p>
+</header>
+<main class="wrap">
+  <section>
+    <video class="film" controls playsinline preload="metadata" poster="../media/poster-cell.jpg" src="../media/cell.mp4" aria-label="Βίντεο: Εργαστήριο Κυττάρου"></video>
+    <p class="note">Το βίντεο γυρίστηκε τρέχοντας την εφαρμογή στο Unity. Στα γυαλιά Meta Quest 3 εμφανίζεται μέσα στον πραγματικό χώρο.</p>
+  </section>
+  <section><h2>Το έργο</h2><p>Ο μαθητής, καθισμένος στο θρανίο του, βλέπει μέσα από το passthrough του Meta Quest 3 τα δύο κύτταρα σε τρεις διαστάσεις και τα εξερευνά με τα χέρια του.</p>
+<p>Τα μοντέλα των κυττάρων, τα υλικά και η τομή δημιουργούνται εξ ολοκλήρου με κώδικα. Η εφαρμογή λειτουργεί χωρίς διαδίκτυο και τρέχει και σε υπολογιστή, για προβολή στον πίνακα.</p>
+<p>Υπάρχει και έκδοση WebXR που ανοίγει απευθείας από τον browser των γυαλιών, χωρίς εγκατάσταση, καθώς και οδηγός για τον εκπαιδευτικό.</p></section>
+  <section><h2>Τι κάνει ο χρήστης</h2><div class="features"><div><h3>Αγγίζει ένα οργανίδιο</h3><p>Βλέπει το όνομα και τη λειτουργία του, όπως στο σχολικό βιβλίο.</p></div>
+<div><h3>Πιάνει και γυρίζει το κύτταρο</h3><p>Με τσίμπημα των δαχτύλων το περιστρέφει και το εξετάζει από κάθε πλευρά.</p></div>
+<div><h3>Κάνει τομή</h3><p>Κόβει το κύτταρο για να δει το εσωτερικό του.</p></div>
+<div><h3>Δύο επίπεδα δυσκολίας</h3><p>7 ή 14 οργανίδια, ανάλογα με την τάξη.</p></div>
+<div><h3>Κουίζ με πόντους</h3><p>Με βοήθεια όταν ο μαθητής κολλάει.</p></div>
+<div><h3>Παιχνίδι ταξινόμησης</h3><p>Σε ποιο κύτταρο ανήκει κάθε οργανίδιο;</p></div></div></section>
+  <section><h2>Μέσα στην εφαρμογή</h2><div class="gallery"><figure><img src="../media/cell-desk.jpg" alt="Ζωικό και φυτικό κύτταρο πάνω στο θρανίο"><figcaption>Ζωικό και φυτικό κύτταρο πάνω στο θρανίο</figcaption></figure>
+<figure><img src="../media/cell-labels.jpg" alt="Ετικέτες, όπως στο σχολικό βιβλίο"><figcaption>Ετικέτες, όπως στο σχολικό βιβλίο</figcaption></figure>
+<figure><img src="../media/cell-section.jpg" alt="Τομή: το εσωτερικό του κυττάρου"><figcaption>Τομή: το εσωτερικό του κυττάρου</figcaption></figure>
+<figure><img src="../media/cell-sort.jpg" alt="Ταξινόμηση οργανιδίων"><figcaption>Ταξινόμηση οργανιδίων</figcaption></figure></div></section>
+  <section><h2>Τεχνολογίες</h2><ul class="chips"><li>Unity 6</li><li>C#</li><li>OpenXR</li><li>AR Foundation</li><li>WebXR</li><li>Hand tracking</li><li>Procedural meshes</li><li>Λειτουργία χωρίς διαδίκτυο</li><li>Οδηγός εκπαιδευτικού</li></ul></section>
+</main>
+<footer class="wrap"><p>Χριστίνα Κλημεντιώτη · Επικοινωνία: <a class="mail" href="mailto:cklimedioti@gmail.com">cklimedioti@gmail.com</a> · <a class="mail" href="mailto:xristinaklime@sch.gr">xristinaklime@sch.gr</a></p></footer>
+</body>
+</html>

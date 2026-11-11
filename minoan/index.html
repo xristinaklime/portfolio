@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>Μινωικό Μουσείο Τοιχογραφιών</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one reading column; a full-width painted band (vase pattern) separates the hero from the body, like a fresco frieze */
+:root{
+  --plaster:#f2f1ec; --panel:#ffffff; --ink:#1c2430; --muted:#5a6573;
+  --blue:#1f5a86; --ochre:#b4472a; --line:#d9dbd4;
+  --display:"GFS Didot","Didot","Times New Roman",serif;
+  --body:"Noto Sans","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --plaster:#141922; --panel:#1c232e; --ink:#e9e7e1; --muted:#a3acb8;
+  --blue:#7fb3db; --ochre:#e08a6c; --line:#2c3542; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --plaster:#141922; --panel:#1c232e; --ink:#e9e7e1; --muted:#a3acb8;
+  --blue:#7fb3db; --ochre:#e08a6c; --line:#2c3542; color-scheme:dark}
+
+body{background:var(--plaster);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:860px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{padding-block:56px 32px}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ochre);font-weight:600}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(36px,7vw,60px);line-height:1.05;margin:10px 0 14px;text-wrap:balance}
+.lede{font-size:18px;max-width:62ch;color:var(--ink)}
+.byline{margin-top:18px;color:var(--muted);font-size:14px}
+.frieze{height:96px;background:url("marine.jpg") repeat-x center/auto 100%;border-block:6px solid var(--blue)}
+section{padding-block:36px}
+h2{font-family:var(--display);font-weight:400;font-size:30px;margin:0 0 14px;text-wrap:balance}
+p{margin:0 0 12px;max-width:65ch}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:18px}
+.fact{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:14px 16px}
+.fact b{display:block;font-family:var(--display);font-size:34px;font-weight:400;color:var(--blue);line-height:1}
+.fact span{font-size:14px;color:var(--muted)}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px 28px;margin-top:8px}
+.feature h3{font-size:16px;margin:0 0 4px;color:var(--blue)}
+.feature p{font-size:15px;color:var(--muted);margin:0}
+.timeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:14px}
+.period{padding:12px;background:var(--panel);border-left:1px solid var(--line);font-size:14px}
+.period:first-child{border-left:none}
+.period b{display:block;font-size:15px}
+.period span{color:var(--muted);font-variant-numeric:tabular-nums}
+.exhibits{columns:2 260px;column-gap:28px;margin-top:10px;padding-left:18px}
+.exhibits li{break-inside:avoid;margin-bottom:6px}
+.exhibits small{color:var(--muted)}
+.patterns{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px}
+.patterns figure{margin:0}
+.patterns img{width:100%;aspect-ratio:2/1;object-fit:cover;border-radius:4px;display:block}
+.patterns figcaption{font-size:13px;color:var(--muted);margin-top:4px}
+.role{background:var(--panel);border-left:4px solid var(--ochre);padding:16px 18px;border-radius:0 6px 6px 0}
+.role ul{margin:6px 0 0;padding-left:18px}
+.tech{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tech span{border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:14px;background:var(--panel)}
+.film{width:100%;max-width:100%;aspect-ratio:16/9;display:block;background:#0e1520;border-radius:6px}
+.note{font-size:14px;color:var(--muted);margin-top:6px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.gallery figure{margin:0;min-width:0}
+.gallery .wide{grid-column:1/-1}
+.gallery img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:5px;display:block}
+.gallery figcaption{font-size:14px;color:var(--muted);margin-top:4px}
+.back{text-decoration:none;display:inline-block}.back:hover{text-decoration:underline}
+footer{padding-block:32px 56px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:all}
+@media (max-width:520px){.timeline{grid-template-columns:repeat(2,minmax(0,1fr))}.period:nth-child(3){border-left:none}.period:nth-child(n+3){border-top:1px solid var(--line)}}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <a class="eyebrow back" href="../">← Όλα τα έργα · Χριστίνα Κλημεντιώτη</a>
+  <h1>Μινωικό Μουσείο Τοιχογραφιών</h1>
+  <p class="lede">Ένα δίγλωσσο εικονικό μουσείο σε Unity, όπου ο επισκέπτης περπατά ανάμεσα σε μινωικές τοιχογραφίες και αγγεία, ακούει την ιστορία τους, ψάχνει κρυμμένα σύμβολα και δοκιμάζει τις γνώσεις του.</p>
+  <p class="byline">Πτυχιακή εργασία, Τμήμα Ιστορίας–Αρχαιολογίας, Πανεπιστήμιο Πατρών · αναβάθμιση 2026</p>
+</header>
+
+<div class="frieze" role="img" aria-label="Μοτίβο θαλάσσιου ρυθμού με χταπόδια, από τα αγγεία του μουσείου"></div>
+
+<main class="wrap">
+  <section>
+    <video class="film" controls playsinline preload="metadata" poster="shot_wide2010270.jpg" src="minoan-museum.mp4" aria-label="Βίντεο παρουσίασης του Μινωικού Μουσείου Τοιχογραφιών, 39 δευτερόλεπτα"></video>
+    <p class="note">Σύντομη παρουσίαση του μουσείου · 39″</p>
+  </section>
+
+  <section>
+    <h2>Το έργο</h2>
+    <p>Το μουσείο φέρνει την Κνωσό στην οθόνη: ένα δωμάτιο με τις γνωστότερες τοιχογραφίες του ανακτόρου και μια συλλογή αγγείων από όλες τις φάσεις του μινωικού πολιτισμού. Κάθε έκθεμα συνοδεύεται από πληροφορίες για τη χρονολόγηση, τον τόπο εύρεσης και την ερμηνεία του, γραμμένες για μαθητές και ευρύ κοινό.</p>
+    <p>Σχεδιάστηκε ως εκπαιδευτικό εργαλείο που μπορεί να χρησιμοποιηθεί στην τάξη, πριν ή μετά από μια επίσκεψη σε μουσείο, ή από σχολεία που δεν μπορούν να ταξιδέψουν στην Κρήτη.</p>
+    <div class="facts">
+      <div class="fact"><b>7</b><span>τοιχογραφίες</span></div>
+      <div class="fact"><b>7</b><span>αγγεία σε 3D</span></div>
+      <div class="fact"><b>7</b><span>κρυμμένα σύμβολα</span></div>
+      <div class="fact"><b>12</b><span>ερωτήσεις κουίζ</span></div>
+      <div class="fact"><b>2</b><span>γλώσσες (ΕΛ / EN)</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Τι κάνει ο επισκέπτης</h2>
+    <div class="features">
+      <div class="feature"><h3>Περιηγείται ελεύθερα</h3><p>Κινείται στις αίθουσες σε πρώτο ή τρίτο πρόσωπο, ως μια εξερευνήτρια-αρχαιολόγος, και πλησιάζει όποιο έκθεμα θέλει.</p></div>
+      <div class="feature"><h3>Ακολουθεί ξενάγηση</h3><p>Μια αυτόματη ξενάγηση τον φέρνει μπροστά σε κάθε τοιχογραφία και ανοίγει την κάρτα πληροφοριών της.</p></div>
+      <div class="feature"><h3>Εξετάζει τα αγγεία</h3><p>Βλέπει κάθε αγγείο από κοντά σε περιστρεφόμενη βάση, το γυρίζει και κάνει ζουμ στη διακόσμηση.</p></div>
+      <div class="feature"><h3>Βρίσκει κρυμμένα σύμβολα</h3><p>Μαζεύει επτά σύμβολα, από τον διπλό πέλεκυ ως τον Δίσκο της Φαιστού, και μαθαίνει τι σήμαιναν.</p></div>
+      <div class="feature"><h3>Ανοίγει τον χάρτη</h3><p>Ένας διαδραστικός χάρτης της Κρήτης δείχνει Κνωσό, Φαιστό, Μάλια, Ζάκρο, Παλαίκαστρο και το Σπήλαιο των Καμαρών.</p></div>
+      <div class="feature"><h3>Ελέγχει τι έμαθε</h3><p>Ένα κουίζ 12 ερωτήσεων με εξήγηση σε κάθε απάντηση κλείνει την επίσκεψη.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Μέσα στο μουσείο</h2>
+    <div class="gallery">
+      <figure class="wide"><img src="shot_wide124000.jpg" alt="Αίθουσα του μουσείου με κολόνες και τοιχογραφίες"><figcaption>Η κεντρική αίθουσα</figcaption></figure>
+      <figure><img src="shot_wide2010270.jpg" alt="Η τοιχογραφία με τους γρύπες ανάμεσα σε μινωικές κολόνες"><figcaption>Οι Γρύπες της Αίθουσας του Θρόνου</figcaption></figure>
+      <figure><img src="shot_exdolphins.jpg" alt="Η τοιχογραφία των δελφινιών στον τοίχο του μουσείου"><figcaption>Η Τοιχογραφία των Δελφινιών</figcaption></figure>
+      <figure><img src="shot_exbulls.jpg" alt="Η τοιχογραφία των ταυροκαθαψίων"><figcaption>Τα Ταυροκαθάψια</figcaption></figure>
+      <figure><img src="shot_exparisienne.jpg" alt="Η τοιχογραφία της Παριζιάνας"><figcaption>Η «Παριζιάνα»</figcaption></figure>
+      <figure><img src="shot_exprince.jpg" alt="Ο Πρίγκιπας με τα Κρίνα"><figcaption>Ο Πρίγκιπας με τα Κρίνα</figcaption></figure>
+      <figure><img src="shot_exmarine.jpg" alt="Φλάσκα θαλάσσιου ρυθμού με χταπόδι σε βάθρο"><figcaption>Φλάσκα θαλάσσιου ρυθμού</figcaption></figure>
+      <figure><img src="shot_exkamares.jpg" alt="Πρόχους καμαραϊκού ρυθμού σε βάθρο"><figcaption>Πρόχους καμαραϊκού ρυθμού</figcaption></figure>
+      <figure><img src="shot_symlabrys.jpg" alt="Ο διπλός πέλεκυς, κρυμμένο σύμβολο, δίπλα σε αγγείο"><figcaption>Κρυμμένο σύμβολο: η λάβρυς</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Χρονολόγιο</h2>
+    <p>Κάθε έκθεμα τοποθετείται σε μία από τις τέσσερις περιόδους του μινωικού πολιτισμού, ώστε ο επισκέπτης να βλέπει πού ανήκει στον χρόνο.</p>
+    <div class="timeline">
+      <div class="period"><b>Προανακτορική</b><span>3100–1900 π.Χ.</span></div>
+      <div class="period"><b>Παλαιοανακτορική</b><span>1900–1700 π.Χ.</span></div>
+      <div class="period"><b>Νεοανακτορική</b><span>1700–1450 π.Χ.</span></div>
+      <div class="period"><b>Μετανακτορική</b><span>1450–1100 π.Χ.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Τα εκθέματα</h2>
+    <ul class="exhibits">
+      <li>Οι Γρύπες της Αίθουσας του Θρόνου <small>· τοιχογραφία</small></li>
+      <li>Πίθηκοι και Πουλιά <small>· τοιχογραφία</small></li>
+      <li>Η Τοιχογραφία των Δελφινιών <small>· τοιχογραφία</small></li>
+      <li>Τα Ταυροκαθάψια <small>· τοιχογραφία</small></li>
+      <li>Η «Παριζιάνα» <small>· τοιχογραφία</small></li>
+      <li>Ο Πρίγκιπας με τα Κρίνα <small>· τοιχογραφία</small></li>
+      <li>Οι Γαλάζιες Κυρίες <small>· τοιχογραφία</small></li>
+      <li>Πίθος <small>· αγγείο</small></li>
+      <li>Πρόχους καμαραϊκού ρυθμού <small>· αγγείο</small></li>
+      <li>Φλάσκα θαλάσσιου ρυθμού <small>· αγγείο</small></li>
+      <li>Πρόχους φυτικού ρυθμού <small>· αγγείο</small></li>
+      <li>Αμφορέας ανακτορικού ρυθμού <small>· αγγείο</small></li>
+      <li>Κωνικό ρυτό <small>· αγγείο</small></li>
+      <li>Ψευδόστομος αμφορέας <small>· αγγείο</small></li>
+    </ul>
+    <div class="patterns">
+      <figure><img src="marine.jpg" alt="Διακόσμηση θαλάσσιου ρυθμού με χταπόδια"><figcaption>Θαλάσσιος ρυθμός</figcaption></figure>
+      <figure><img src="kamares.jpg" alt="Διακόσμηση καμαραϊκού ρυθμού με σπείρες"><figcaption>Καμαραϊκός ρυθμός</figcaption></figure>
+      <figure><img src="floral.jpg" alt="Διακόσμηση φυτικού ρυθμού"><figcaption>Φυτικός ρυθμός</figcaption></figure>
+      <figure><img src="palace.jpg" alt="Διακόσμηση ανακτορικού ρυθμού"><figcaption>Ανακτορικός ρυθμός</figcaption></figure>
+    </div>
+    <p style="margin-top:8px;font-size:14px;color:var(--muted)">Οι διακοσμήσεις των αγγείων σχεδιάστηκαν για το μουσείο, με βάση τους ρυθμούς της μινωικής κεραμικής.</p>
+  </section>
+
+  <section>
+    <h2>Ο ρόλος μου</h2>
+    <div class="role">
+      <p>Έκανα το έργο από την αρχή ως το τέλος:</p>
+      <ul>
+        <li>Επιλογή εκθεμάτων και αρχαιολογική τεκμηρίωση</li>
+        <li>Συγγραφή κειμένων σε ελληνικά και αγγλικά</li>
+        <li>Σχεδιασμός της εμπειρίας: ξενάγηση, κουίζ, σύμβολα, χάρτης</li>
+        <li>Ανάπτυξη σε Unity/C#, και αναβάθμιση το 2026 με νέα στοιχεία (χαρακτήρας, κρυμμένα σύμβολα)</li>
+      </ul>
+    </div>
+    <div class="tech"><span>Unity</span><span>C#</span><span>3D περιήγηση πρώτου προσώπου</span><span>Windows &amp; macOS</span><span>Ελληνικά / English</span></div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Χριστίνα Κλημεντιώτη · Διδάκτωρ Επιστημών της Αγωγής, αρχαιολόγος, ΜΔΕ στις Ψηφιακές Δεξιότητες</p>
+  <p>Επικοινωνία: <a class="mail" href="mailto:cklimedioti@gmail.com">cklimedioti@gmail.com</a> · <a class="mail" href="mailto:xristinaklime@sch.gr">xristinaklime@sch.gr</a></p>
+</footer>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<style>body{margin:0}img{max-width:100%}</style>
 <title>Εργαστήριο Κυττάρου</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans:wght@400;500;600&display=swap">
 <style>
@@ -26,9 +26,9 @@ body{background:var(--plaster);color:var(--ink);font-family:var(--body);font-siz
 a.eyebrow:hover{text-decoration:underline}
 h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,7vw,64px);line-height:1.05;margin:10px 0 16px;text-wrap:balance}
 h2{font-family:var(--display);font-weight:400;font-size:30px;margin:0 0 16px;text-wrap:balance}
-p{margin:0 0 12px;max-width:66ch;text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto}
+p{margin:0 0 12px;max-width:none;text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto}
 section{padding-block:34px}
-.lede{font-size:19px;max-width:60ch}
+.lede{font-size:19px;max-width:none}
 header{padding-block:60px 28px}
 .frieze{height:72px;background:url("minoan/marine.jpg") repeat-x center/auto 100%;border-block:5px solid var(--blue)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding:0;list-style:none}
@@ -58,6 +58,8 @@ header{padding-block:60px 28px}
 .gallery figcaption{font-size:14px;line-height:1.45;color:var(--muted);margin-top:6px;text-align:left}
 .cta{display:inline-block;margin-top:14px;padding:11px 20px;border-radius:8px;background:var(--blue);color:var(--panel);font-weight:600;text-decoration:none}.cta:hover{filter:brightness(1.1)}.cta:focus-visible{outline:2px solid var(--ochre);outline-offset:2px}
 footer{padding-block:32px 56px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+footer p{text-align:left;max-width:none}
+footer .mails{white-space:nowrap}
 footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:all}
 @media (prefers-reduced-motion: reduce){.card{transition:none}.card:hover{transform:none}}
 @media (max-width:560px){body{font-size:16px}.lede{font-size:17px}p{max-width:none}section{padding-block:26px}header{padding-block:40px 22px}}
@@ -69,16 +71,16 @@ footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:a
   <a class="eyebrow" href="../">← Όλα τα έργα · Χριστίνα Κλημεντιώτη</a>
   <h1>Εργαστήριο Κυττάρου</h1>
   <p class="lede">Εκπαιδευτική εφαρμογή μεικτής πραγματικότητας για τη Βιολογία της ΣΤ΄ Δημοτικού και της Α΄ Γυμνασίου. Ένα ζωικό και ένα φυτικό κύτταρο «κάθονται» πάνω στο θρανίο του μαθητή.</p>
-  <div class="eyebrow" style="margin-top:8px">Mixed Reality · Meta Quest 3 · WebXR</div>
+  <div class="eyebrow" style="margin-top:8px">Mixed Reality · Meta&nbsp;Quest&nbsp;3 · WebXR</div>
   <a class="cta" href="app/">Δοκίμασε την εφαρμογή στον browser</a>
-  <p class="note">Ανοίγει σε υπολογιστή και, για μεικτή πραγματικότητα, από τον browser του Meta Quest 3.</p>
+  <p class="note">Ανοίγει σε υπολογιστή και, για μεικτή πραγματικότητα, από τον browser του Meta&nbsp;Quest&nbsp;3.</p>
 </header>
 <main class="wrap">
   <section>
     <video class="film" controls playsinline preload="metadata" poster="../media/poster-cell.jpg" src="../media/cell.mp4" aria-label="Βίντεο: Εργαστήριο Κυττάρου"></video>
-    <p class="note">Το βίντεο γυρίστηκε τρέχοντας την εφαρμογή στο Unity. Στα γυαλιά Meta Quest 3 εμφανίζεται μέσα στον πραγματικό χώρο.</p>
+    <p class="note">Το βίντεο γυρίστηκε τρέχοντας την εφαρμογή στο Unity. Στα γυαλιά Meta&nbsp;Quest&nbsp;3 εμφανίζεται μέσα στον πραγματικό χώρο.</p>
   </section>
-  <section><h2>Το έργο</h2><p>Ο μαθητής, καθισμένος στο θρανίο του, βλέπει μέσα από το passthrough του Meta Quest 3 τα δύο κύτταρα σε τρεις διαστάσεις και τα εξερευνά με τα χέρια του.</p>
+  <section><h2>Το έργο</h2><p>Ο μαθητής, καθισμένος στο θρανίο του, βλέπει μέσα από το passthrough του Meta&nbsp;Quest&nbsp;3 τα δύο κύτταρα σε τρεις διαστάσεις και τα εξερευνά με τα χέρια του.</p>
 <p>Τα μοντέλα των κυττάρων, τα υλικά και η τομή δημιουργούνται εξ ολοκλήρου με κώδικα. Η εφαρμογή λειτουργεί χωρίς διαδίκτυο και τρέχει και σε υπολογιστή, για προβολή στον πίνακα.</p>
 <p>Υπάρχει και έκδοση WebXR που ανοίγει απευθείας από τον browser των γυαλιών, χωρίς εγκατάσταση, καθώς και οδηγός για τον εκπαιδευτικό.</p></section>
   <section><h2>Τι κάνει ο χρήστης</h2><div class="features"><div><h3>Αγγίζει ένα οργανίδιο</h3><p>Βλέπει το όνομα και τη λειτουργία του, όπως στο σχολικό βιβλίο.</p></div>
@@ -93,6 +95,6 @@ footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:a
 <figure><img src="../media/cell-sort.jpg" alt="Ταξινόμηση: ο μαθητής σέρνει κάθε οργανίδιο στο σωστό κύτταρο"><figcaption>Ταξινόμηση: κάθε οργανίδιο στο σωστό κύτταρο</figcaption></figure></div></section>
   <section><h2>Τεχνολογίες</h2><ul class="chips"><li>Unity 6</li><li>C#</li><li>OpenXR</li><li>AR Foundation</li><li>WebXR</li><li>Hand tracking</li><li>Procedural meshes</li><li>Λειτουργία χωρίς διαδίκτυο</li><li>Οδηγός εκπαιδευτικού</li></ul></section>
 </main>
-<footer class="wrap"><p>Χριστίνα Κλημεντιώτη · Επικοινωνία: <a class="mail" href="mailto:cklimedioti@gmail.com">cklimedioti@gmail.com</a> · <a class="mail" href="mailto:xristinaklime@sch.gr">xristinaklime@sch.gr</a></p></footer>
+<footer class="wrap"><p>Χριστίνα Κλημεντιώτη · Επικοινωνία: <span class="mails"><a class="mail" href="mailto:cklimedioti@gmail.com">cklimedioti@gmail.com</a> · <a class="mail" href="mailto:xristinaklime@sch.gr">xristinaklime@sch.gr</a></span></p></footer>
 </body>
 </html>

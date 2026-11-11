@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<style>body{margin:0}img{max-width:100%}</style>
 <title>The Hall of Vases</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Noto+Sans:wght@400;500;600&display=swap">
 <style>
@@ -43,6 +43,7 @@ header{padding-block:60px 28px}
 .card h3{font-family:var(--display);font-weight:400;font-size:23px;margin:0;line-height:1.15}
 .card p{margin:0;font-size:15px;color:var(--muted)}
 .film{width:100%;max-width:100%;aspect-ratio:16/9;display:block;background:var(--night);border-radius:8px}
+.cta{display:inline-block;margin-top:14px;padding:11px 20px;border-radius:8px;background:var(--blue);color:var(--panel);font-weight:600;text-decoration:none}.cta:hover{filter:brightness(1.1)}.cta:focus-visible{outline:2px solid var(--ochre);outline-offset:2px}
 .note{font-size:14px;color:var(--muted);margin-top:6px}
 .offer{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px 28px}
 .offer h3,.features h3{font-size:16px;margin:0 0 4px;color:var(--blue)}
@@ -57,6 +58,8 @@ header{padding-block:60px 28px}
 .gallery img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:5px;display:block}
 .gallery figcaption{font-size:14px;line-height:1.45;color:var(--muted);margin-top:6px;text-align:left}
 footer{padding-block:32px 56px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+footer p{text-align:left}
+footer .mails{white-space:nowrap}
 footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:all}
 @media (prefers-reduced-motion: reduce){.card{transition:none}.card:hover{transform:none}}
 @media (max-width:560px){body{font-size:16px}.lede{font-size:17px}p{max-width:none}section{padding-block:26px}header{padding-block:40px 22px}}
@@ -68,6 +71,8 @@ footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:a
   <a class="eyebrow" href="../">← Όλα τα έργα · Χριστίνα Κλημεντιώτη</a>
   <h1>The Hall of Vases</h1>
   <p class="lede">Ένα μουσείο αρχαίας ελληνικής κεραμικής που στήνεται μέσα στο δικό σου δωμάτιο. Ο επισκέπτης περπατά ανάμεσα σε έξι αυθεντικά αγγεία, ανάμεσά τους ο αμφορέας του Εξηκία.</p>
+  <a class="cta" href="app/">Δοκίμασε την εφαρμογή στον browser</a>
+  <p class="note">Εκδοχή για υπολογιστή: περπατάς με το πληκτρολόγιο και κοιτάς γύρω με το ποντίκι. Η πλήρης εμπειρία, μέσα στο δικό σου δωμάτιο, είναι στα γυαλιά Meta Quest 3.</p>
   <div class="eyebrow" style="margin-top:8px">Mixed Reality · Meta Quest 3</div>
 </header>
 <main class="wrap">
@@ -91,6 +96,6 @@ footer .mail{text-decoration:none;color:var(--ink);font-weight:500;user-select:a
 <figure><img src="../media/vases-visit.jpg" alt="Ο επισκέπτης πλησιάζει την υδρία ανάμεσα στα βάθρα"><figcaption>Ο επισκέπτης πλησιάζει κάθε αγγείο για να ακούσει την ιστορία του</figcaption></figure></div></section>
   <section><h2>Τεχνολογίες</h2><ul class="chips"><li>Unity 6</li><li>C#</li><li>URP</li><li>Meta XR SDK</li><li>Interaction SDK</li><li>MR Utility Kit</li><li>Hand tracking</li><li>Passthrough</li><li>glTF, LOD</li><li>Εκπαιδευτικό σενάριο</li></ul></section>
 </main>
-<footer class="wrap"><p>Χριστίνα Κλημεντιώτη · Επικοινωνία: <a class="mail" href="mailto:cklimedioti@gmail.com">cklimedioti@gmail.com</a> · <a class="mail" href="mailto:xristinaklime@sch.gr">xristinaklime@sch.gr</a></p></footer>
+<footer class="wrap"><p>Χριστίνα Κλημεντιώτη · Επικοινωνία: <span class="mails"><a class="mail" href="mailto:cklimedioti@gmail.com">cklimedioti@gmail.com</a> · <a class="mail" href="mailto:xristinaklime@sch.gr">xristinaklime@sch.gr</a></span></p></footer>
 </body>
 </html>
